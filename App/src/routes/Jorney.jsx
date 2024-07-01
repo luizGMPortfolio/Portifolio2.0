@@ -1,4 +1,4 @@
-import "./jorney.css";
+import "./Cssjorney.css";
 
 import Title from "../components/Title";
 import Logo from "../components/Logo";
