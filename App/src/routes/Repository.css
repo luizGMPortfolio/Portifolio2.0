@@ -1,0 +1,178 @@
+.repository{
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/Slide11.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.repository .container-text{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.container-text::-webkit-scrollbar {
+    width: 12px; /* Largura da scrollbar vertical */
+    height: 12px; /* Altura da scrollbar horizontal */
+}
+
+.container-text::-webkit-scrollbar-track {
+    background: transparent; /* Cor do fundo da track */
+}
+
+.container-text::-webkit-scrollbar-thumb {
+    background: #888; /* Cor da thumb */
+    border-radius: 3px; /* Bordas arredondadas da thumb */
+}
+
+.container-text::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor da thumb quando hover */
+}
+
+
+
+
+
+
+.resp {
+    margin-top: 10px;
+}
+
+.resp-sup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.rs-titulo {
+    width: 75%;
+    padding-left: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.rs-select {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#select {
+    width: 160px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 40px;
+    font-size: 18px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.repositorio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.Item{
+    width: 90%;
+}
+
+.Irepositorio {
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.repos-titulo {
+    width: 62%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.rs-titulo{
+    font-size: 18px;
+}
+
+
+.repos-linguagem {
+    width: 28%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rl {
+    display: flex;
+    border-radius: 8px;
+    padding: 0 5px;
+}
+
+.rl-icon {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rl-lang-text {
+    width: 100%;
+    padding-left: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+.repos-seta {
+    width: 10%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc{
+    justify-content: center;
+    border: 2px solid #fff;
+    font-size: 18PX;
+    padding: 0 20px;
+    width: '500px'; 
+    height: '110px';
+}
+
+
+a{
+    color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+    .repository .InfoContainer{
+        display: none;
+    }
+    .repository{
+        background: url(../assets/Mobile6.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+    }
+}

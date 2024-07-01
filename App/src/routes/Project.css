@@ -1,0 +1,63 @@
+.Project {
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/Slide8.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.Project .InfoContainer{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.Project .InfoContainer li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.Project .InfoContainer img{
+    width: 100px;
+    border-radius: 15px;
+}
+
+.Project .InfoContainer li .item {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    width: inherit;
+    content-visibility: visible;
+    text-decoration: none;
+    color: #F20707;
+}
+
+.Project .InfoContainer li p{
+    width: 90%;
+    padding: 0 20px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .Project .InfoContainer{
+        display: none;
+    }
+    .Project{
+        background: url(../assets/Mobile5.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+    }
+}

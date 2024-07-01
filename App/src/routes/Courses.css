@@ -1,0 +1,76 @@
+.courses{
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/Slide3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.courses .InfoContainer{
+    margin: auto;
+    width: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.courses .InfoContainer li{
+    
+    display: flex;
+    padding: 10px 10px;
+    background-color: #1c1c1c;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.courses .InfoContainer li span{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+    margin: 5px 0;
+}
+.courses .InfoContainer li a{
+    font-weight: 300;
+    color: #fff;
+    text-decoration:underline;
+}
+.courses .InfoContainer li h4{
+    margin: 8px 0;
+    font-weight: 400;
+}
+.courses .InfoContainer li h5{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.courses .InfoContainer li img{
+    width: 60px;
+}
+
+.courses .InfoContainer li p{
+    margin: 0;
+}
+
+.courses .InfoContainer li a{
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .courses .InfoContainer{
+        display: none;
+    }
+    .courses{
+        background: url(../assets/Mobile4.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+    }
+}

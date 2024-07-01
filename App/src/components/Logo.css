@@ -1,0 +1,26 @@
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 150px;
+    height: 130px;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.black{
+    background: url(../assets/Logo2.png);
+}
+.white{
+    background: url(../assets/Logo1.png);
+}
+
+
+@media (max-width: 768px) {
+    .black{
+        background: url(../assets/Logo1.png);
+    }
+    .white{
+        background: url(../assets/Logo1.png);
+    }
+}

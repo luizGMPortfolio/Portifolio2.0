@@ -1,0 +1,12 @@
+.title{
+    padding-left: 20px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+.title h4{
+    margin: auto 0;
+    font-size: 35px;
+    color: #f20707;
+}

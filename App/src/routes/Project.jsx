@@ -1,0 +1,173 @@
+import "./Project.css";
+
+import Title from "../components/Title";
+import Logo from "../components/Logo";
+import Midias from "../components/Midias";
+
+import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+import Poke from "../assets/LogoPokecatch.png";
+import LGM from "../assets/logoLGM.png";
+
+function Project() {
+  const navigate = useNavigate();
+
+  const [ExitLeft, setExitLeft] = useState(false);
+  const [ExitRight, setExitRight] = useState(false);
+  const [position, setPosition] = useState({ x: 500, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const draggableRef = useRef(null);
+  const [Page, setPage] = useState();
+  const offset = useRef({ x: 0, y: 0 });
+
+
+  const [positionM, setPositionM] = useState({ x: '10%', y: 0 });
+  const [ExitLeftM, setExitLeftM] = useState(false);
+  const [ExitRightM, setExitRightM] = useState(false);
+
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    const rect = draggableRef.current.getBoundingClientRect();
+    offset.current = {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    };
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+
+    const x = e.clientX - offset.current.x;
+    const y = e.clientY - offset.current.y;
+
+    const xM = e.clientX - offset.current.x;
+    // eslint-disable-next-line no-unused-vars
+    const yM = e.clientY - offset.current.y;
+
+    setPosition({ x, y });
+    setPositionM({ x, y});
+
+    if (x < 300 ) {
+      // Condição para executar função
+      triggerFunctionLeft();
+    } else if (x > 600) {
+      triggerFunctionRight();
+    }
+
+    if(xM < 5){
+      triggerFunctionLeftM();
+    }
+    else if(xM > 100){
+      triggerFunctionRightM();
+    }
+  };
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseUp);
+    setPosition({ x: 500, y: 0 });
+    setPositionM({ x: '10%', y: 0 })
+  };
+  const triggerFunctionLeft = () => {
+    console.log("Função disparada ao atingir o ponto!");
+    setExitLeft(true);
+    setPage("/Repository");
+    // Coloque aqui a função que deseja executar
+  };
+  const triggerFunctionRight = () => {
+    console.log("Função disparada ao atingir o ponto!");
+    setExitRight(true);
+    setPage("/Courses");
+    // Coloque aqui a função que deseja executar
+  };
+  const triggerFunctionLeftM = () => {
+    console.log("Função disparada ao atingir o ponto!");
+    setExitLeftM(true);
+    setPage("/Repository");
+    // Coloque aqui a função que deseja executar
+  };
+  const triggerFunctionRightM = () => {
+    console.log("Função disparada ao atingir o ponto!");
+    setExitRightM(true);
+    setPage("/Courses");
+    // Coloque aqui a função que deseja executar
+  };
+
+  return (
+    <div className="Project">
+      <Logo Type={"black"} />
+      <Midias Type={"white"} />
+      <div
+        className={`container-text draggable ${
+          ExitLeft ? "exitAnimationLeft" : ""
+        } ${ExitRight ? "exitAnimationRight" : ""}`}
+        ref={draggableRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onAnimationEnd={() => (Page ? navigate(Page) : "")}
+        style={{ left: position.x }}
+      >
+        <Title title="Projetos    {" />
+        <div className="InfoContainer">
+          <li>
+            <div>
+              <img src={LGM} alt="" />
+            </div>
+            <div>
+              <h3>LGMdeveloper</h3>
+              <p>
+                Projeto especial desenvolvido e publicado para minha empresa
+                pessoal de desenvolvimento web.
+              </p>
+            </div>
+            <div>
+              <a href="https://lgmdeveloper.vercel.app" className="item">
+                Visit
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src={Poke} alt="" />
+            </div>
+            <div>
+              <h3>Pokecatch</h3>
+              <p>
+                Jogo Desenvolvido para um projeto de faculdade, versão inicial
+                do projeto, complemente jogave. Tema de pokemon .o objetivo é
+                colhecianar todos os pokemons, capturando eles nos locais ou
+                jogando o mini-jogo "Quem é esse pokemon ?"
+              </p>
+            </div>
+            <div>
+              <a
+                href="https://pokecatch23-ay50uqa03-lgm-potifolio.vercel.app"
+                className="item"
+              >
+                Visit
+              </a>
+            </div>
+          </li>
+        </div>
+        <Title title={"}"} />
+      </div>
+      <div
+        className={`ContainerMobile ${
+          ExitLeftM ? "exitAnimationLeftM" : ""
+        } ${ExitRightM ? "exitAnimationRightM" : ""}`}
+        ref={draggableRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onAnimationEnd={() => (Page ? navigate(Page) : "")}
+        style={{ left: positionM.x}}
+      ></div>
+    </div>
+  );
+}
+
+export default Project;
