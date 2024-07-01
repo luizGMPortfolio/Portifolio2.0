@@ -1,4 +1,4 @@
-import "./about.css";
+import "./About.css";
 
 import Title from "../components/Title";
 import Logo from "../components/Logo";
