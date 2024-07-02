@@ -27,9 +27,6 @@ function Skills() {
   const [Page, setPage] = useState();
   const offset = useRef({ x: 0, y: 0 });
 
-  const [positionM, setPositionM] = useState({ x: '10%', y: 0 });
-  const [ExitLeftM, setExitLeftM] = useState(false);
-  const [ExitRightM, setExitRightM] = useState(false);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -52,7 +49,6 @@ function Skills() {
     const yM = e.clientY - offset.current.y;
 
     setPosition({ x, y });
-    setPositionM({ x, y});
 
     if (x < 300 ) {
       // Condição para executar função
@@ -60,20 +56,12 @@ function Skills() {
     } else if (x > 600) {
       triggerFunctionRight();
     }
-
-    if(xM < 5){
-      triggerFunctionLeftM();
-    }
-    else if(xM > 100){
-      triggerFunctionRightM();
-    }
   };
   const handleMouseUp = () => {
     setIsDragging(false);
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
     setPosition({ x: 500, y: 0 });
-    setPositionM({ x: '10%', y: 0 })
   };
   const triggerFunctionLeft = () => {
     console.log("Função disparada ao atingir o ponto!");
@@ -87,18 +75,7 @@ function Skills() {
     setPage("/");
     // Coloque aqui a função que deseja executar
   };
-  const triggerFunctionLeftM = () => {
-    console.log("Função disparada ao atingir o ponto!");
-    setExitLeftM(true);
-    setPage("/Jorney");
-    // Coloque aqui a função que deseja executar
-  };
-  const triggerFunctionRightM = () => {
-    console.log("Função disparada ao atingir o ponto!");
-    setExitRightM(true);
-    setPage("/");
-    // Coloque aqui a função que deseja executar
-  };
+
 
   return (
     <div className="Skills">
@@ -324,17 +301,6 @@ function Skills() {
         </div>
         <Title title="}" />
       </div>
-      <div
-        className={`ContainerMobile ${
-          ExitLeftM ? "exitAnimationLeftM" : ""
-        } ${ExitRightM ? "exitAnimationRightM" : ""}`}
-        ref={draggableRef}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onAnimationEnd={() => (Page ? navigate(Page) : "")}
-        style={{ left: positionM.x}}
-      ></div>
     </div>
   );
 }
