@@ -161,18 +161,3 @@
 a{
     color: #fff;
 }
-
-
-
-@media (max-width: 768px) {
-    .repository .InfoContainer{
-        display: none;
-    }
-    .repository{
-        background: url(../assets/Mobile6.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-
-    }
-}

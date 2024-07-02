@@ -35,16 +35,3 @@
 }
 
 
-
-@media (max-width: 768px) {
-    .jorney .InfoContainer{
-        display: none;
-    }
-    .jorney{
-        background: url(../assets/Mobile3.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-
-    }
-}

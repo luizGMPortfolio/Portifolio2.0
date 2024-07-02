@@ -55,7 +55,6 @@ const About = () => {
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
     setPosition({ x: 500, y: 0 });
-    setPositionM({ x: '10%', y: 0 })
   };
 
   const triggerFunctionLeft = () => {

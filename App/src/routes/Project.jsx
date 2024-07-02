@@ -22,10 +22,6 @@ function Project() {
   const offset = useRef({ x: 0, y: 0 });
 
 
-  const [positionM, setPositionM] = useState({ x: '10%', y: 0 });
-  const [ExitLeftM, setExitLeftM] = useState(false);
-  const [ExitRightM, setExitRightM] = useState(false);
-
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -43,12 +39,7 @@ function Project() {
     const x = e.clientX - offset.current.x;
     const y = e.clientY - offset.current.y;
 
-    const xM = e.clientX - offset.current.x;
-    // eslint-disable-next-line no-unused-vars
-    const yM = e.clientY - offset.current.y;
-
     setPosition({ x, y });
-    setPositionM({ x, y});
 
     if (x < 300 ) {
       // Condição para executar função
@@ -57,19 +48,12 @@ function Project() {
       triggerFunctionRight();
     }
 
-    if(xM < 5){
-      triggerFunctionLeftM();
-    }
-    else if(xM > 100){
-      triggerFunctionRightM();
-    }
   };
   const handleMouseUp = () => {
     setIsDragging(false);
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
     setPosition({ x: 500, y: 0 });
-    setPositionM({ x: '10%', y: 0 })
   };
   const triggerFunctionLeft = () => {
     console.log("Função disparada ao atingir o ponto!");
@@ -80,18 +64,6 @@ function Project() {
   const triggerFunctionRight = () => {
     console.log("Função disparada ao atingir o ponto!");
     setExitRight(true);
-    setPage("/Courses");
-    // Coloque aqui a função que deseja executar
-  };
-  const triggerFunctionLeftM = () => {
-    console.log("Função disparada ao atingir o ponto!");
-    setExitLeftM(true);
-    setPage("/Repository");
-    // Coloque aqui a função que deseja executar
-  };
-  const triggerFunctionRightM = () => {
-    console.log("Função disparada ao atingir o ponto!");
-    setExitRightM(true);
     setPage("/Courses");
     // Coloque aqui a função que deseja executar
   };
@@ -155,17 +127,6 @@ function Project() {
         </div>
         <Title title={"}"} />
       </div>
-      <div
-        className={`ContainerMobile ${
-          ExitLeftM ? "exitAnimationLeftM" : ""
-        } ${ExitRightM ? "exitAnimationRightM" : ""}`}
-        ref={draggableRef}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onAnimationEnd={() => (Page ? navigate(Page) : "")}
-        style={{ left: positionM.x}}
-      ></div>
     </div>
   );
 }

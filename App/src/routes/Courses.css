@@ -61,16 +61,3 @@
     font-weight: bold;
 }
 
-
-@media (max-width: 768px) {
-    .courses .InfoContainer{
-        display: none;
-    }
-    .courses{
-        background: url(../assets/Mobile4.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-
-    }
-}
