@@ -15,12 +15,3 @@
     background: url(../assets/Logo1.png);
 }
 
-
-@media (max-width: 768px) {
-    .black{
-        background: url(../assets/Logo1.png);
-    }
-    .white{
-        background: url(../assets/Logo1.png);
-    }
-}
