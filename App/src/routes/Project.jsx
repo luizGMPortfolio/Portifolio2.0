@@ -8,7 +8,7 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Poke from "../assets/LogoPokecatch.png";
-import LGM from "../assets/logoLGM.png";
+import LGM from "../assets/Logo .png";
 
 function Project() {
   const navigate = useNavigate();
