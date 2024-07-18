@@ -24,8 +24,6 @@ const courses = () => {
   const [Page, setPage] = useState();
   const offset = useRef({ x: 0, y: 0 });
 
-
-
   const handleMouseDown = (e) => {
     setIsDragging(true);
     const rect = draggableRef.current.getBoundingClientRect();
@@ -42,17 +40,14 @@ const courses = () => {
     const x = e.clientX - offset.current.x;
     const y = e.clientY - offset.current.y;
 
-
-
     setPosition({ x, y });
 
-    if (x < 300 ) {
+    if (x < 300) {
       // Condição para executar função
       triggerFunctionLeft();
     } else if (x > 600) {
       triggerFunctionRight();
     }
-
   };
   const handleMouseUp = () => {
     setIsDragging(false);
@@ -96,12 +91,13 @@ const courses = () => {
                 React do Zero a Maestria (c/ hooks, router, API, Projetos)
               </a>
               <h4>Udemy</h4>
-              <span><h5>Carga horária:</h5>30,5 horas</span>
-              
+              <span>
+                <h5>Carga horária:</h5>30,5 horas
+              </span>
+
               <p>
-                Crie projetos completos com react, utilizando novas
-                tecnologias em alta no mercado como firebase, nodeJs, mongoDB e
-                mais!
+                Crie projetos completos com react, utilizando novas tecnologias
+                em alta no mercado como firebase, nodeJs, mongoDB e mais!
               </p>
             </div>
             <div>
@@ -114,10 +110,12 @@ const courses = () => {
                 Google Firebase na Prática e em Detalhes(Usando JavaScript)
               </a>
               <h4>Udemy</h4>
-              <span><h5>Carga horária:</h5>12 horas</span>
+              <span>
+                <h5>Carga horária:</h5>12 horas
+              </span>
               <p>
-                Aprenda os principais Recurso do firebase em um
-                projetos Web didático.
+                Aprenda os principais Recurso do firebase em um projetos Web
+                didático.
               </p>
             </div>
             <div>
@@ -130,7 +128,9 @@ const courses = () => {
                 Certificação UX UI DESIGN FIGMA + inteligência Artificial
               </a>
               <h4>Udemy</h4>
-              <span><h5>Carga horária:</h5>20,5 horas</span>
+              <span>
+                <h5>Carga horária:</h5>20,5 horas
+              </span>
               <p>
                 Domine a criação de wireframes, mockups e protótipos
                 profissionais para aplicações mobile/desktop apartir do zero,
@@ -147,11 +147,13 @@ const courses = () => {
                 Mecânico de manutenção de maquinas industriais(Curso Técnico)
               </a>
               <h4>Senai</h4>
-              <span><h5>Carga horária:</h5>2000 horas</span>
+              <span>
+                <h5>Carga horária:</h5>2000 horas
+              </span>
               <p>
-                voltado para a formação de profissionais capacitados a
-                realizar a manutenção corretiva e preventiva em máquinas e
-                equipamentos industriais.
+                voltado para a formação de profissionais capacitados a realizar
+                a manutenção corretiva e preventiva em máquinas e equipamentos
+                industriais.
               </p>
             </div>
             <div>
@@ -161,7 +163,10 @@ const courses = () => {
         </div>
         <Title title={"}"} />
       </div>
-      <div className="container-mobile"></div>
+      <div className="container-mobile">
+        <Title title="Cursos   {" />
+        <Title title={"}"} />
+      </div>
     </div>
   );
 };

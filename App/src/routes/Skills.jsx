@@ -27,7 +27,6 @@ function Skills() {
   const [Page, setPage] = useState();
   const offset = useRef({ x: 0, y: 0 });
 
-
   const handleMouseDown = (e) => {
     setIsDragging(true);
     const rect = draggableRef.current.getBoundingClientRect();
@@ -50,7 +49,7 @@ function Skills() {
 
     setPosition({ x, y });
 
-    if (x < 300 ) {
+    if (x < 300) {
       // Condição para executar função
       triggerFunctionLeft();
     } else if (x > 600) {
@@ -75,7 +74,6 @@ function Skills() {
     setPage("/");
     // Coloque aqui a função que deseja executar
   };
-
 
   return (
     <div className="Skills">
@@ -263,7 +261,7 @@ function Skills() {
                 </div>
               </li>
               <li>
-              <div className="info">
+                <div className="info">
                   <div className="box1">
                     <img src={css} alt="" />
                     <p>Css</p>
@@ -292,16 +290,241 @@ function Skills() {
           <div className="soft">
             <h2>Soft:</h2>
             <ul>
-              <li><p>Trabalho em equipe</p></li>
-              <li><p>Criatividade</p></li>
-              <li><p>Pensamento Critico</p></li>
-              <li><p>Gestão de tempo</p></li>
+              <li>
+                <p>Trabalho em equipe</p>
+              </li>
+              <li>
+                <p>Criatividade</p>
+              </li>
+              <li>
+                <p>Pensamento Critico</p>
+              </li>
+              <li>
+                <p>Gestão de tempo</p>
+              </li>
             </ul>
           </div>
         </div>
         <Title title="}" />
       </div>
-      <div className="container-mobile"></div>
+      <div className="container-mobile">
+        <Title title="Habilidades    {" />
+        <div className="InfoContainer">
+          <div className="hard">
+            <h2 className="font-20">Hard:</h2>
+            <ul className="itens">
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={React} alt="" />
+                    <p className="font-10">React</p>
+                  </div>
+                  <div className="box2">
+                    <h3>9</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={Js} alt="" />
+                    <p className="font-10">JavaScript</p>
+                  </div>
+                  <div className="box2">
+                    <h3>9</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={node} alt="" />
+                    <p className="font-10">NodeJs</p>
+                  </div>
+                  <div className="box2">
+                    <h3>7</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={python} alt="" />
+                    <p className="font-10">Python</p>
+                  </div>
+                  <div className="box2">
+                    <h3>6</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={Firebase} alt="" />
+                    <p className="font-10">Firebase</p>
+                  </div>
+                  <div className="box2">
+                    <h3>8</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={gpt} alt="" />
+                    <p className="font-10">Prompt Engineering</p>
+                  </div>
+                  <div className="box2">
+                    <h3>10</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={html} alt="" />
+                    <p className="font-10">Html</p>
+                  </div>
+                  <div className="box2">
+                    <h3>10</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div className="info">
+                  <div className="box1">
+                    <img src={css} alt="" />
+                    <p className="font-10">Css</p>
+                  </div>
+                  <div className="box2">
+                    <h3>10</h3>
+                  </div>
+                </div>
+                <div className="level">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="soft">
+            <h2 className="font-20">Soft:</h2>
+            <ul>
+              <li>
+                <p className="font-10">Trabalho em equipe</p>
+              </li>
+              <li>
+                <p className="font-10">Criatividade</p>
+              </li>
+              <li>
+                <p className="font-10">Pensamento Critico</p>
+              </li>
+              <li>
+                <p className="font-10">Gestão de tempo</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <Title title="}" />
+      </div>
     </div>
   );
 }

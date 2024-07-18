@@ -1,96 +1,197 @@
-.Skills{
-    width: 100%;
-    height: 100vh;
-    background: url(../assets/Slide7.png);
+.Skills {
+  width: 100%;
+  height: 100vh;
+  background: url(../assets/Slide7.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.Skills .InfoContainer {
+  width: 90%;
+  margin: auto;
+}
+
+.hard .itens,
+.soft ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+.itens li,
+.soft li {
+  height: 70px;
+  width: 233px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+}
+.soft li {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.soft li p {
+  margin: 0;
+}
+.itens li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.info {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.info div {
+  display: flex;
+}
+.box1 {
+  margin-left: 5px;
+  gap: 10px;
+}
+.box1 img {
+  margin: auto;
+  height: 88%;
+}
+.box2 {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box2 h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.info p {
+  margin: 0;
+  line-height: 20px;
+  height: 100%;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.level {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+.level ul {
+  display: flex;
+  width: 90%;
+  height: 75%;
+  padding: 0;
+  margin-left: 5px;
+  align-items: center;
+  gap: 1px;
+  border-radius: 5px;
+  padding: 0 2px;
+  border: 1px solid #424242;
+}
+.level li {
+  width: 20px;
+  height: 80%;
+  background-color: #f20707;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .Skills {
+    background: url(../assets/Mobile2.png);
     background-size: contain;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
+    background-position: bottom;
+  }
 
-.Skills .InfoContainer{
-    width: 90%;
-    margin: auto;
-}
-
-.hard .itens, .soft ul{
+  .hard .itens,
+  .soft ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
     gap: 10px;
-}
-.itens li, .soft li{
-    height: 70px;
-    width: 233px;
-    background-color: #1C1C1C;
-    border-radius: 10px;
-}
-.soft li{
+  }
+  .itens li,
+  .soft li {
     height: 40px;
+    width: 130px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+  }
+  .soft li {
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.soft li p{
+  }
+  .soft li p {
     margin: 0;
-}
-.itens li{
+  }
+  .itens li {
     display: flex;
     flex-direction: column;
     gap: 1px;
-    
-}
-.info{
+  }
+  .info {
     width: 100%;
     height: 60%;
     display: flex;
     justify-content: space-between;
-}
-.info div{
+  }
+  .info div {
     display: flex;
-}
-.box1{
+  }
+  .box1 {
     margin-left: 5px;
     gap: 10px;
-}
-.box1 img{
+  }
+  .box1 img {
     margin: auto;
     height: 88%;
-}
-.box2{
+  }
+  .box2 {
     width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.box2 h3{
+  }
+  .box2 h3 {
     margin: 0;
     font-size: 22px;
+  }
 
-}
-
-.info p{
+  .info p {
     margin: 0;
-    line-height: 20px;
+    line-height: 10px;
     height: 100%;
     font-size: 17px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: end;
-}
+  }
 
-.level {
+  .level {
     width: 100%;
     height: 40%;
     display: flex;
     align-items: center;
-}
-.level ul{
-
+  }
+  .level ul {
     display: flex;
     width: 90%;
     height: 75%;
@@ -101,26 +202,11 @@
     border-radius: 5px;
     padding: 0 2px;
     border: 1px solid #424242;
-
-}
-.level li{
-    width: 20px;
+  }
+  .level li {
+    width: 11px;
     height: 80%;
     background-color: #f20707;
-    border-radius: 5px;
-}
-
-
-
-@media (max-width: 768px) {
-    .Skills .InfoContainer{
-        display: none;
-    }
-    .Skills{
-        background: url(../assets/Mobile2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-
-    }
+    border-radius: 3px;
+  }
 }
