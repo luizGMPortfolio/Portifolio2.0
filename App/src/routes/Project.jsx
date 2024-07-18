@@ -8,7 +8,7 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Poke from "../assets/LogoPokecatch.png";
-import LGM from "../assets/Logo .png";
+import LGM from "../assets/Logo.png";
 
 function Project() {
   const navigate = useNavigate();
@@ -127,6 +127,7 @@ function Project() {
         </div>
         <Title title={"}"} />
       </div>
+      <div className="container-mobile"></div>
     </div>
   );
 }

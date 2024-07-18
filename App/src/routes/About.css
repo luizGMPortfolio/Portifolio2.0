@@ -31,3 +31,17 @@
     display: inherit !important;
 }
 
+@media (max-width: 768px) {
+    .about{
+        background: url('../assets/Mobile1.png');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .about .InfoContainer span{
+        height: 30px;
+    }
+    .invert{
+        height: 190px !important;
+    }
+}

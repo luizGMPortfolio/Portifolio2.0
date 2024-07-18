@@ -161,6 +161,7 @@ const courses = () => {
         </div>
         <Title title={"}"} />
       </div>
+      <div className="container-mobile"></div>
     </div>
   );
 };

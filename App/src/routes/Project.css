@@ -49,3 +49,11 @@
     text-align: justify;
 }
 
+@media (max-width: 768px) {
+    .Project{
+        background: url('../assets/Mobile6.png');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
