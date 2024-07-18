@@ -42,16 +42,12 @@ p {
   opacity: 0;
 }
 
-
-.font-20{
+.font-20 {
   font-size: 20px !important;
 }
-.font-10{
+.font-10 {
   font-size: 10px !important;
 }
-
-
-
 
 @keyframes moveLeft {
   0% {
@@ -134,28 +130,43 @@ p {
   }
 }
 
-
-
-.container-mobile{
+.container-mobile {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .container-text{
+  .container-text {
     display: none;
   }
-  .container-mobile{
+  .container-mobile {
     display: flex;
     flex-direction: column;
     margin-right: 10%;
     margin-bottom: 50px;
-    width: 300px;
+    width: 320px;
     height: 400px;
     background-color: black;
     border-radius: 20px;
+    overflow-y: auto;
   }
-  h2{
+  h2 {
     margin: 5px 0;
   }
+  .container-mobile::-webkit-scrollbar {
+    width: 12px; /* Largura da scrollbar vertical */
+    height: 12px; /* Altura da scrollbar horizontal */
+  }
 
+  .container-mobile::-webkit-scrollbar-track {
+    background: transparent; /* Cor do fundo da track */
+  }
+
+  .container-mobile::-webkit-scrollbar-thumb {
+    background: #888; /* Cor da thumb */
+    border-radius: 3px; /* Bordas arredondadas da thumb */
+  }
+
+  .container-mobile::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor da thumb quando hover */
+  }
 }

@@ -56,4 +56,13 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+    .Project .InfoContainer li{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+    }
+    .Project .InfoContainer li h3{
+        margin: 5px 0;
+    }
+
 }

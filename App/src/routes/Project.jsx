@@ -127,7 +127,51 @@ function Project() {
         </div>
         <Title title={"}"} />
       </div>
-      <div className="container-mobile"></div>
+      <div className="container-mobile">
+      <Title title="Projetos    {" />
+      <div className="InfoContainer">
+          <li>
+            <div>
+              <img src={LGM} alt="" />
+            </div>
+            <div>
+              <h3>LGMdeveloper</h3>
+              <p>
+                Projeto especial desenvolvido e publicado para minha empresa
+                pessoal de desenvolvimento web.
+              </p>
+            </div>
+            <div>
+              <a href="https://lgmdeveloper.vercel.app" className="item">
+                Visit
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src={Poke} alt="" />
+            </div>
+            <div>
+              <h3>Pokecatch</h3>
+              <p>
+                Jogo Desenvolvido para um projeto de faculdade, versão inicial
+                do projeto, complemente jogave. Tema de pokemon .o objetivo é
+                colhecianar todos os pokemons, capturando eles nos locais ou
+                jogando o mini-jogo "Quem é esse pokemon ?"
+              </p>
+            </div>
+            <div>
+              <a
+                href="https://pokecatch23-ay50uqa03-lgm-potifolio.vercel.app"
+                className="item"
+              >
+                Visit
+              </a>
+            </div>
+          </li>
+        </div>
+      <Title title={"}"} />
+      </div>
     </div>
   );
 }

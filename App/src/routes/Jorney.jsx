@@ -111,7 +111,39 @@ function Jorney() {
         </div>
         <Title title={"}"} />
       </div>
-      <div className="container-mobile"></div>
+      <div className="container-mobile">
+      <Title title="Experiencia    {" />
+      <div className="InfoContainer">
+          <div>
+            <h2>Espaço móveis:</h2>
+            <div>
+              <span><h3>Cargo:</h3>Sócio</span>
+              <span><h3>Periodo:</h3> 2018-2023</span>
+              <p>
+                Meu primeiro trabalho foi como sócio em uma loja de móveis, onde
+                eu realizava vendas e participava da administração. Além disso,
+                desenvolvi um site para a loja, proporcionando uma nova fonte de
+                receita para o negócio.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2>Desenvolvedor Web:</h2>
+            <div>
+              <span><h3>Cargo:</h3>Autonomo</span>
+              <span><h3>Periodo:</h3>2022-2024</span>
+              <p>
+                Trabalho como freelancer no desenvolvimento de projetos para
+                pessoas físicas e jurídicas. Meus projetos abrangem desde
+                portfólios simples até APIs mais complexas. Estou disponível
+                para atender uma variedade de necessidades de desenvolvimento,
+                adaptando-me às demandas específicas de cada cliente.
+              </p>
+            </div>
+          </div>
+        </div>
+      <Title title={"}"} />
+      </div>
     </div>
   );
 }

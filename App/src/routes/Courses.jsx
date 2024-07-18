@@ -165,6 +165,48 @@ const courses = () => {
       </div>
       <div className="container-mobile">
         <Title title="Cursos   {" />
+        <div className="InfoContainer">
+          <li>
+            <div>
+              <a href="https://www.udemy.com/share/106ezS3@MNboApI4z3pjO6xOxcBqLaPi18yycNne8ACOU9Lk-_aOYoAP85azzSYn8huoQEB-YA==/">
+                React do Zero a Maestria (c/ hooks, router, API, Projetos)
+              </a>
+            </div>
+            <div>
+              <img src={React} alt="" />
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="https://www.udemy.com/share/103hBA3@InmQLbtS3HjrUX0c5TwyBu5sQIGNtWqOt1yq_-QArTZMWH6I6vDodDhFIMLLQBHtvw==/">
+                Google Firebase na Prática e em Detalhes(Usando JavaScript)
+              </a>
+            </div>
+            <div>
+              <img src={Firebase} alt="" />
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="https://www.udemy.com/share/109Zi63@BckUQ3T9JO1AxnrlYomCPH5haXs9MePUYXWXZnoFZmlOPA3c23P7UQhZCRVqTPyomg==/">
+                Certificação UX UI DESIGN FIGMA + inteligência Artificial
+              </a>
+            </div>
+            <div>
+              <img src={gpt} alt="" />
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="https://www.senairs.org.br/cursos/cursos-de-evolucao-profissional/mecanica-de-manutencao">
+                Mecânico de manutenção de maquinas industriais(Curso Técnico)
+              </a>
+            </div>
+            <div>
+              <img src={Senai} alt="" />
+            </div>
+          </li>
+        </div>
         <Title title={"}"} />
       </div>
     </div>

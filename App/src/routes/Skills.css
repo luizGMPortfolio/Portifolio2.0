@@ -130,7 +130,7 @@
     height: 40px;
     width: 130px;
     background-color: #1c1c1c;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   .soft li {
     height: 20px;
@@ -172,6 +172,7 @@
   .box2 h3 {
     margin: 0;
     font-size: 22px;
+    color: #fff;
   }
 
   .info p {

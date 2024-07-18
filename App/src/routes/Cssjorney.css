@@ -42,4 +42,7 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+    .jorney .InfoContainer span{
+        color: #fff;
+    }
 }
