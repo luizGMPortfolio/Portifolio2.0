@@ -155,14 +155,13 @@ function Project() {
               <h3>Pokecatch</h3>
               <p>
                 Jogo Desenvolvido para um projeto de faculdade, versão inicial
-                do projeto, complemente jogave. Tema de pokemon .o objetivo é
-                colhecianar todos os pokemons, capturando eles nos locais ou
-                jogando o mini-jogo "Quem é esse pokemon ?"
+                do projeto, complemente jogavel. Tema de pokemon .O objetivo é
+                colhecionar todos os pokemons, acertando os mini-jogos de quiz envolvendo o tema"
               </p>
             </div>
             <div>
               <a
-                href="https://pokecatch23-ay50uqa03-lgm-potifolio.vercel.app"
+                href="https://pokecatch-five.vercel.app"
                 className="item"
               >
                 Visit
